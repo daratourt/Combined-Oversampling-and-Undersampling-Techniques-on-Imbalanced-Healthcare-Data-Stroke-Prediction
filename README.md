@@ -30,8 +30,8 @@ Class imbalance in healthcare datasets often leads to models with high accuracy 
 
 ## Methods
 1. **Data Preprocessing:** Cleaning and preparing the data for analysis.
-2. **Baseline Model:** Training a baseline model on the original imbalanced dataset.
-3. Sequential combination between **Oversampling Techniques** and **Undersampling Techniques**
+2. **Baseline Model:** Training a baseline model on the dataset that applies **Oversampling Techniques** and **Undersampling Techniques**.
+3. Sequential combination between **Oversampling Techniques** and **Undersampling Techniques**.
    
     3.1. **Oversampling Techniques:** 
    - **Random Over-Sampling:** Randomly replicating minority class examples to balance the dataset.
@@ -197,40 +197,33 @@ The following evaluation metrics were used in this study:
    - The ROC curve plots the true positive rate (recall) against the false positive rate (1 - specificity). The AUC score indicates how well the model distinguishes between the classes. A score of 1 indicates perfect discrimination, while a score of 0.5 indicates no discrimination (random guessing).
 
 ## Results
-The results section will detail the performance of models on both the imbalanced and oversampled datasets.
-### Performance on Imbalanced Data
-The table below summarizes the performance of various machine learning models when trained on the imbalanced stroke dataset:
+This section details the performance of various machine learning models on datasets processed using undersampling techniques, oversampling techniques, and their sequential combinations.
 
-| Model                        | Accuracy | Precision (0) | Precision (1) | Recall (0) | Recall (1) | F1-score (0) | F1-score (1) | ROC AUC Score |
-|------------------------------|----------|---------------|---------------|------------|------------|--------------|--------------|----------------|
-| Logistic Regression          | 0.94    | 0.94          | 0.00          | 1.00       | 0.00       | 0.97         | 0.00         | 0.851          |
-| Random Forest                | 0.94    | 0.94          | 0.00          | 1.00       | 0.00       | 0.97         | 0.00         | 0.797          |
-| Support Vector Machine       | 0.94    | 0.94          | 0.00          | 1.00       | 0.00       | 0.97         | 0.00         | 0.628          |
-| Gradient Boosting            | 0.94    | 0.94          | 0.33          | 1.00       | 0.02       | 0.97         | 0.03         | 0.835          |
-| XGBoost                      | 0.94     | 0.94          | 0.50          | 0.99       | 0.10       | 0.97         | 0.16         |  0.796         |
-| AdaBoost                     | 0.94     | 0.94          | 0.00          | 1.00       | 0.00       | 0.97         | 0.00         | 0.793          |
-| LightGBM                     | 0.94     | 0.94          | 0.33          | 0.99       | 0.06       | 0.97         | 0.11         | 0.817          |
-| CatBoost                     | 0.94     |0.94           |0.67           |1.00        |0.03        |0.97          |0.06          | 0.819          |
-| K-Nearest Neighbors          | 0.94    | 0.94          | 0.00          | 1.00       | 0.00       | 0.97         | 0.00         | 0.647          |
-| Decision Tree                | 0.92    | 0.95          | 0.27          | 0.97       | 0.19       | 0.96         | 0.23         | 0.580          |
-| Naive Bayes                  | 0.87    | 0.96          | 0.22          | 0.89       | 0.47       | 0.93         | 0.30         | 0.829          |
-| Linear Discriminant Analysis | 0.93    | 0.94          | 0.27          | 0.99       | 0.05       | 0.97         | 0.08         | 0.842          |
-| Quadratic Discriminant Analysis | 0.88 | 0.96          | 0.24          | 0.91       | 0.45       | 0.93         | 0.31         | 0.830          |
-|  Extra Trees                 | 0.94     | 0.94          | 0.29          | 0.99       | 0.03       | 0.97         | 0.06         | 0.776          |
+### Performance on Oversampling Techniques
+The table below summarizes the performance of several machine learning models when trained on the imbalanced stroke dataset using oversampling techniques:
 
-The **Performance on Imbalanced Data** highlights the challenges models face when the dataset is highly skewed toward the majority class. In this context, models like **Logistic Regression**, **Support Vector Machine (SVM)**, **Random Forest**, and **K-Nearest Neighbors (K-NN)** achieved high overall accuracy (0.94) due to their dominance in predicting the majority class accurately. However, their precision and recall scores for the minority class are consistently low or even zero, indicating that these models failed to effectively capture the minority class instances, reflecting their limitations in handling class imbalance.
+| Model                        | Accuracy | Precision (0) | Precision (1) | Recall (0) | Recall (1) | F1-Score (0) | F1-Score (1) | ROC AUC Score |
+|------------------------------|----------|---------------|---------------|------------|------------|--------------|--------------|---------------|
+| Logistic Regression          |          |               |               |            |            |              |              |               |
+| Random Forest                |          |               |               |            |            |              |              |               |
+| Support Vector Machine       |          |               |               |            |            |              |              |               |
+| Gradient Boosting            |          |               |               |            |            |              |              |               |
+| XGBoost                      |          |               |               |            |            |              |              |               |
+| AdaBoost                     |          |               |               |            |            |              |              |               |
+| LightGBM                     |          |               |               |            |            |              |              |               |
+| CatBoost                     |          |               |               |            |            |              |              |               |
+| K-Nearest Neighbors          |          |               |               |            |            |              |              |               |
+| Decision Tree                |          |               |               |            |            |              |              |               |
+| Naive Bayes                  |          |               |               |            |            |              |              |               |
+| Linear Discriminant Analysis |          |               |               |            |            |              |              |               |
+| Quadratic Discriminant Analysis |      |               |               |            |            |              |              |               |
+| Extra Trees                  |          |               |               |            |            |              |              |               |
 
-Ensemble models like **Gradient Boosting**, **XGBoost**, and **CatBoost** slightly improved minority class performance. For example, **Gradient Boosting** and **LightGBM** achieved moderate precision (0.33 for Gradient Boosting and LightGBM) and recall (0.02 and 0.06, respectively) for the minority class, resulting in ROC AUC scores above 0.8. **CatBoost** reached a minority precision of 0.67, though with a recall of just 0.03. These results suggest that ensemble models show a slight advantage in identifying minority instances, albeit insufficient to meaningfully improve minority class performance.
+### Performance on Undersampling Techniques
+This section will summarize the performance of models when trained on datasets processed with undersampling techniques. 
 
-The **Decision Tree** model performed reasonably well, achieving an accuracy of 0.92 and a more balanced ROC AUC of 0.580. However, the model’s recall for the minority class remains low at 0.19, demonstrating a need for further tuning or rebalancing techniques to effectively manage imbalanced data. Similarly, **Extra Trees** achieved high accuracy (0.94) but low minority class recall (0.03), highlighting that individual tree-based models often struggle to identify minority classes without sampling techniques.
-
-**Naive Bayes** and **Quadratic Discriminant Analysis (QDA)** offered a comparatively better balance between classes, with QDA achieving an accuracy of 0.88 and a minority class recall of 0.45. These probabilistic models managed to identify more minority instances than other models, showing some resilience to imbalance. **Naive Bayes** achieved a moderate ROC AUC score of 0.829, showing better performance in classifying both classes compared to deterministic models like SVM and K-NN, which struggled.
-
-**Linear Discriminant Analysis (LDA)** displayed good overall performance with an accuracy of 0.93 and a ROC AUC of 0.842, slightly better than other linear models but still limited in minority recall. The **Quadratic Discriminant Analysis** achieved a similar ROC AUC (0.830) and demonstrated moderate precision for the minority class, reflecting the model’s ability to handle class overlap moderately well in an imbalanced scenario.
-
-In summary, on imbalanced data, models tended to prioritize the majority class at the expense of the minority class, as shown by consistently high precision for the majority class and low recall for the minority class. **Ensemble models** like **XGBoost** and **CatBoost** slightly outperformed others, while **probabilistic models** like **Naive Bayes** and **QDA** demonstrated a relatively better balance. However, most models showed significant limitations in minority class detection, underscoring the importance of using rebalancing techniques to achieve a more equitable model performance on imbalanced datasets.
 ### Performance on Combined Oversampling and Undersampling Techniques
-Sequential combinations of oversampling and undersampling techniques were applied to evaluate their impact on model performance
+Sequential combinations of oversampling and undersampling techniques were applied to evaluate their combined impact on model performance. 
 #### Random Over-Sampling + Cluster Centroids
 
 | Model                        | Accuracy | Precision (0) | Precision (1) | Recall (0) | Recall (1) | F1-Score (0) | F1-Score (1) | ROC AUC Score |
