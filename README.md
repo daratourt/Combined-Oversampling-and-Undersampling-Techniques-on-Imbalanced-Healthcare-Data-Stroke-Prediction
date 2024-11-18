@@ -232,6 +232,114 @@ In summary, on imbalanced data, models tended to prioritize the majority class a
 
 ### Performance on Oversampling Techniques
 The table below summarizes the performance of several machine learning models when trained on the imbalanced stroke dataset using oversampling techniques:
+#### Random Over-Sampling
+| Model                        | Accuracy | Precision (0) | Precision (1) | Recall (0) | Recall (1) | F1-Score (0) | F1-Score (1) | ROC AUC Score |
+|------------------------------|----------|---------------|---------------|------------|------------|--------------|--------------|---------------|
+| Logistic Regression          |          |               |               |            |            |              |              |               |
+| Random Forest                |          |               |               |            |            |              |              |               |
+| Support Vector Machine       |          |               |               |            |            |              |              |               |
+| Gradient Boosting            |          |               |               |            |            |              |              |               |
+| XGBoost                      |          |               |               |            |            |              |              |               |
+| AdaBoost                     |          |               |               |            |            |              |              |               |
+| LightGBM                     |          |               |               |            |            |              |              |               |
+| CatBoost                     |          |               |               |            |            |              |              |               |
+| K-Nearest Neighbors          |          |               |               |            |            |              |              |               |
+| Decision Tree                |          |               |               |            |            |              |              |               |
+| Naive Bayes                  |          |               |               |            |            |              |              |               |
+| Linear Discriminant Analysis |          |               |               |            |            |              |              |               |
+| Quadratic Discriminant Analysis |      |               |               |            |            |              |              |               |
+| Extra Trees                  |          |               |               |            |            |              |              |               |
+#### SMOTE (Synthetic Minority Over-sampling Technique)
+| Model                        | Accuracy | Precision (0) | Precision (1) | Recall (0) | Recall (1) | F1-Score (0) | F1-Score (1) | ROC AUC Score |
+|------------------------------|----------|---------------|---------------|------------|------------|--------------|--------------|---------------|
+| Logistic Regression          |          |               |               |            |            |              |              |               |
+| Random Forest                |          |               |               |            |            |              |              |               |
+| Support Vector Machine       |          |               |               |            |            |              |              |               |
+| Gradient Boosting            |          |               |               |            |            |              |              |               |
+| XGBoost                      |          |               |               |            |            |              |              |               |
+| AdaBoost                     |          |               |               |            |            |              |              |               |
+| LightGBM                     |          |               |               |            |            |              |              |               |
+| CatBoost                     |          |               |               |            |            |              |              |               |
+| K-Nearest Neighbors          |          |               |               |            |            |              |              |               |
+| Decision Tree                |          |               |               |            |            |              |              |               |
+| Naive Bayes                  |          |               |               |            |            |              |              |               |
+| Linear Discriminant Analysis |          |               |               |            |            |              |              |               |
+| Quadratic Discriminant Analysis |      |               |               |            |            |              |              |               |
+| Extra Trees                  |          |               |               |            |            |              |              |               |
+
+#### ADASYN (Adaptive Synthetic Sampling)
+| Model                        | Accuracy | Precision (0) | Precision (1) | Recall (0) | Recall (1) | F1-Score (0) | F1-Score (1) | ROC AUC Score |
+|------------------------------|----------|---------------|---------------|------------|------------|--------------|--------------|---------------|
+| Logistic Regression          |          |               |               |            |            |              |              |               |
+| Random Forest                |          |               |               |            |            |              |              |               |
+| Support Vector Machine       |          |               |               |            |            |              |              |               |
+| Gradient Boosting            |          |               |               |            |            |              |              |               |
+| XGBoost                      |          |               |               |            |            |              |              |               |
+| AdaBoost                     |          |               |               |            |            |              |              |               |
+| LightGBM                     |          |               |               |            |            |              |              |               |
+| CatBoost                     |          |               |               |            |            |              |              |               |
+| K-Nearest Neighbors          |          |               |               |            |            |              |              |               |
+| Decision Tree                |          |               |               |            |            |              |              |               |
+| Naive Bayes                  |          |               |               |            |            |              |              |               |
+| Linear Discriminant Analysis |          |               |               |            |            |              |              |               |
+| Quadratic Discriminant Analysis |      |               |               |            |            |              |              |               |
+| Extra Trees                  |          |               |               |            |            |              |              |               |
+
+#### Borderline-SMOTE
+| Model                        | Accuracy | Precision (0) | Precision (1) | Recall (0) | Recall (1) | F1-Score (0) | F1-Score (1) | ROC AUC Score |
+|------------------------------|----------|---------------|---------------|------------|------------|--------------|--------------|---------------|
+| Logistic Regression          |          |               |               |            |            |              |              |               |
+| Random Forest                |          |               |               |            |            |              |              |               |
+| Support Vector Machine       |          |               |               |            |            |              |              |               |
+| Gradient Boosting            |          |               |               |            |            |              |              |               |
+| XGBoost                      |          |               |               |            |            |              |              |               |
+| AdaBoost                     |          |               |               |            |            |              |              |               |
+| LightGBM                     |          |               |               |            |            |              |              |               |
+| CatBoost                     |          |               |               |            |            |              |              |               |
+| K-Nearest Neighbors          |          |               |               |            |            |              |              |               |
+| Decision Tree                |          |               |               |            |            |              |              |               |
+| Naive Bayes                  |          |               |               |            |            |              |              |               |
+| Linear Discriminant Analysis |          |               |               |            |            |              |              |               |
+| Quadratic Discriminant Analysis |      |               |               |            |            |              |              |               |
+| Extra Trees                  |          |               |               |            |            |              |              |               |
+
+#### SVMSMOTE
+| Model                        | Accuracy | Precision (0) | Precision (1) | Recall (0) | Recall (1) | F1-Score (0) | F1-Score (1) | ROC AUC Score |
+|------------------------------|----------|---------------|---------------|------------|------------|--------------|--------------|---------------|
+| Logistic Regression          |          |               |               |            |            |              |              |               |
+| Random Forest                |          |               |               |            |            |              |              |               |
+| Support Vector Machine       |          |               |               |            |            |              |              |               |
+| Gradient Boosting            |          |               |               |            |            |              |              |               |
+| XGBoost                      |          |               |               |            |            |              |              |               |
+| AdaBoost                     |          |               |               |            |            |              |              |               |
+| LightGBM                     |          |               |               |            |            |              |              |               |
+| CatBoost                     |          |               |               |            |            |              |              |               |
+| K-Nearest Neighbors          |          |               |               |            |            |              |              |               |
+| Decision Tree                |          |               |               |            |            |              |              |               |
+| Naive Bayes                  |          |               |               |            |            |              |              |               |
+| Linear Discriminant Analysis |          |               |               |            |            |              |              |               |
+| Quadratic Discriminant Analysis |      |               |               |            |            |              |              |               |
+| Extra Trees                  |          |               |               |            |            |              |              |               |
+
+#### SMOTEENN
+| Model                        | Accuracy | Precision (0) | Precision (1) | Recall (0) | Recall (1) | F1-Score (0) | F1-Score (1) | ROC AUC Score |
+|------------------------------|----------|---------------|---------------|------------|------------|--------------|--------------|---------------|
+| Logistic Regression          |          |               |               |            |            |              |              |               |
+| Random Forest                |          |               |               |            |            |              |              |               |
+| Support Vector Machine       |          |               |               |            |            |              |              |               |
+| Gradient Boosting            |          |               |               |            |            |              |              |               |
+| XGBoost                      |          |               |               |            |            |              |              |               |
+| AdaBoost                     |          |               |               |            |            |              |              |               |
+| LightGBM                     |          |               |               |            |            |              |              |               |
+| CatBoost                     |          |               |               |            |            |              |              |               |
+| K-Nearest Neighbors          |          |               |               |            |            |              |              |               |
+| Decision Tree                |          |               |               |            |            |              |              |               |
+| Naive Bayes                  |          |               |               |            |            |              |              |               |
+| Linear Discriminant Analysis |          |               |               |            |            |              |              |               |
+| Quadratic Discriminant Analysis |      |               |               |            |            |              |              |               |
+| Extra Trees                  |          |               |               |            |            |              |              |               |
+
+#### SMOTETomek
 
 | Model                        | Accuracy | Precision (0) | Precision (1) | Recall (0) | Recall (1) | F1-Score (0) | F1-Score (1) | ROC AUC Score |
 |------------------------------|----------|---------------|---------------|------------|------------|--------------|--------------|---------------|
