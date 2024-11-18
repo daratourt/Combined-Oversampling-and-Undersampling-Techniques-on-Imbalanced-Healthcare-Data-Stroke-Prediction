@@ -23,7 +23,7 @@ The dataset used in this project contains information necessary to predict the o
 
 ## Problem Definition
 Class imbalance in healthcare datasets often leads to models with high accuracy but poor sensitivity for minority outcomes (e.g., stroke). This study focuses on:
-1. Evaluating model performance on imbalanced data.
+1. Evaluating model performance on datasets processed using undersampling and oversampling techniques.
 2. Applying sequential combinations of oversampling and undersampling techniques to balance the dataset.
 3. Comparing performance metrics across resampling methods.
 4. Recommending effective techniques for imbalanced healthcare datasets.
