@@ -30,7 +30,7 @@ Class imbalance in healthcare datasets often leads to models with high accuracy 
 
 ## Methods
 1. **Data Preprocessing:** Cleaning and preparing the data for analysis.
-2. **Baseline Model:** Training a baseline model on the dataset that applies **Oversampling Techniques** and **Undersampling Techniques**.
+2. **Baseline Model:** Training a baseline model on the imbalanced dataset.
 3. Sequential combination between **Oversampling Techniques** and **Undersampling Techniques**.
    
     3.1. **Oversampling Techniques:** 
