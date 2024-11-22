@@ -251,6 +251,20 @@ Sequential combinations of oversampling and undersampling techniques were applie
 | Quadratic Discriminant Analysis  | 0.8454    | 0.97          | 0.21          | 0.86       | 0.58       | 0.91         | 0.31         | 0.8330         |
 | Extra Trees                      | 0.9364    | 0.94          | 0.20          | 1.00       | 0.02       | 0.97         | 0.03         | 0.7604         |
 
+Applying **Random Oversampling** combined with **ClusterCentroids Undersampling** significantly improved model performance, particularly for the minority class.
+
+**Logistic Regression** and **Gradient Boosting** emerged as strong contenders for stroke prediction, with Logistic Regression achieving high recall (0.74) for the minority class and an ROC AUC score of 0.8474, making it a balanced choice for identifying strokes. Gradient Boosting offered a moderate trade-off, with recall of 0.68 and an ROC AUC score of 0.8203, suitable for scenarios prioritizing high recall over precision.
+
+Ensemble models like **XGBoost, LightGBM, and CatBoost** maintained high accuracy (91%-94%) but continued to exhibit low recall for the minority class (0.15%-0.24%). However, these models showed improvements compared to their imbalanced counterparts, reflecting the impact of rebalancing techniques on model performance.
+
+Models emphasizing high recall, such as **Support Vector Machines (SVM), AdaBoost, and Linear Discriminant Analysis (LDA)**, achieved minority recall values of 0.74%-0.79%, albeit with low precision (0.16%-0.17%). This makes them effective for minimizing false negatives, particularly in healthcare scenarios requiring extensive follow-up for potential stroke cases.
+
+**Decision Tree and Naive Bayes** demonstrated balanced but modest improvements, with Decision Tree achieving an accuracy of 0.92 and an ROC AUC of 0.5877. Naive Bayes showed a better balance with a minority recall of 0.31 and an ROC AUC of 0.8182, highlighting its resilience to class imbalance.
+
+Models like **Extra Trees** struggled with minority recall (0.02), even after rebalancing, emphasizing the challenges faced by individual tree-based models in detecting minority instances effectively.
+
+Thus, applying **Random Oversampling** combined with **ClusterCentroids Undersampling** significantly improved model performance, particularly for the minority class. **Logistic Regression and Gradient Boosting** stand out as balanced models for stroke prediction, offering a trade-off between recall and precision. Probabilistic models like **Naive Bayes and Quadratic Discriminant Analysis** also show potential due to their resilience to class imbalance. However, models like **Random Forest and LightGBM**, while excelling in overall accuracy, continue to struggle with minority class recall, underscoring the need for further optimization and rebalancing strategies to improve equity in performance.
+
 #### Random Over-Sampling + Random Undersampling
 
 | Model                        | Accuracy | Precision (0) | Precision (1) | Recall (0) | Recall (1) | F1-Score (0) | F1-Score (1) | ROC AUC Score |
