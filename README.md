@@ -267,22 +267,22 @@ Thus, applying **Random Oversampling** combined with **ClusterCentroids Undersam
 
 #### Random Over-Sampling + Random Undersampling
 
-| Model                        | Accuracy | Precision (0) | Precision (1) | Recall (0) | Recall (1) | F1-Score (0) | F1-Score (1) | ROC AUC Score |
-|------------------------------|----------|---------------|---------------|------------|------------|--------------|--------------|---------------|
-| Logistic Regression          |          |               |               |            |            |              |              |               |
-| Random Forest                |          |               |               |            |            |              |              |               |
-| Support Vector Machine       |          |               |               |            |            |              |              |               |
-| Gradient Boosting            |          |               |               |            |            |              |              |               |
-| XGBoost                      |          |               |               |            |            |              |              |               |
-| AdaBoost                     |          |               |               |            |            |              |              |               |
-| LightGBM                     |          |               |               |            |            |              |              |               |
-| CatBoost                     |          |               |               |            |            |              |              |               |
-| K-Nearest Neighbors          |          |               |               |            |            |              |              |               |
-| Decision Tree                |          |               |               |            |            |              |              |               |
-| Naive Bayes                  |          |               |               |            |            |              |              |               |
-| Linear Discriminant Analysis |          |               |               |            |            |              |              |               |
-| Quadratic Discriminant Analysis |      |               |               |            |            |              |              |               |
-| Extra Trees                  |          |               |               |            |            |              |              |               |
+| Model                         | Accuracy | Precision (0) | Precision (1) | Recall (0) | Recall (1) | F1-Score (0) | F1-Score (1) | ROC AUC Score |
+|-------------------------------|----------|---------------|---------------|------------|------------|--------------|--------------|---------------|
+| Logistic Regression           | 0.7515   | 0.98          | 0.17          | 0.75       | 0.76       | 0.85         | 0.27         | 0.8496        |
+| Random Forest                 | 0.9384   | 0.94          | 0.43          | 1.00       | 0.05       | 0.97         | 0.09         | 0.8086        |
+| SVM                           | 0.7652   | 0.96          | 0.14          | 0.78       | 0.55       | 0.86         | 0.22         | 0.7753        |
+| Gradient Boosting             | 0.7945   | 0.97          | 0.18          | 0.80       | 0.65       | 0.88         | 0.28         | 0.8227        |
+| AdaBoost                      | 0.7564   | 0.98          | 0.17          | 0.75       | 0.81       | 0.85         | 0.29         | 0.8365        |
+| XGBoost                       | 0.9266   | 0.95          | 0.33          | 0.97       | 0.21       | 0.96         | 0.26         | 0.7872        |
+| LightGBM                      | 0.9002   | 0.95          | 0.21          | 0.94       | 0.24       | 0.95         | 0.23         | 0.8071        |
+| CatBoost                      | 0.9119   | 0.95          | 0.25          | 0.96       | 0.23       | 0.95         | 0.24         | 0.7840        |
+| k-Nearest Neighbors           | 0.8679   | 0.95          | 0.18          | 0.90       | 0.32       | 0.93         | 0.23         | 0.6495        |
+| Decision Tree                 | 0.9159   | 0.95          | 0.23          | 0.96       | 0.16       | 0.96         | 0.19         | 0.5629        |
+| Naive Bayes                   | 0.7387   | 0.98          | 0.15          | 0.74       | 0.74       | 0.84         | 0.26         | 0.8283        |
+| Linear Discriminant Analysis  | 0.7348   | 0.98          | 0.16          | 0.73       | 0.76       | 0.84         | 0.26         | 0.8487        |
+| Quadratic Discriminant Analysis | 0.7466 | 0.98          | 0.16          | 0.75       | 0.74       | 0.85         | 0.26         | 0.8292        |
+| Extra Trees                   | 0.9374   | 0.94          | 0.25          | 1.00       | 0.02       | 0.97         | 0.03         | 0.7484        |
 
 #### Random Over-Sampling + NearMiss-1
 
